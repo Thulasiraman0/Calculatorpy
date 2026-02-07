@@ -1,0 +1,15 @@
+pipeline {
+ agent any
+ stages {
+ stage('Checkout Code') {
+ steps {
+ echo 'this code will read the file'
+ }
+ }
+ stage('Read File') {
+ steps {
+ bat 'type README.md'
+ }
+ }
+ }
+}
