@@ -1,0 +1,15 @@
+pipeline {
+ agent any
+ stages {
+ stage('Checkout Code') {
+ steps {
+ echo 'this code is to print the Directory of the respected github files'
+ }
+ }
+ stage('Print Directory') {
+ steps {
+ bat 'cd'
+ }
+ }
+ }
+}
