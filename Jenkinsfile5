@@ -1,0 +1,15 @@
+pipeline {
+ agent any
+ stages {
+ stage('Checkout Code') {
+ steps {
+ git 'https://github.com/Thulasiraman0/Pro_Task'
+ }
+ }
+ stage('Read File') {
+ steps {
+ bat 'type README.md'
+ }
+ }
+ }
+}
