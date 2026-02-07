@@ -1,0 +1,15 @@
+pipeline {
+ agent any
+ stages {
+ stage('Checkout Code') {
+ steps {
+ echo 'read and create file from the git'
+ }
+ }
+ stage('Create File') {
+ steps {
+ bat 'echo This file is created by Jenkins > demo.txt'
+ }
+ }
+ }
+}
