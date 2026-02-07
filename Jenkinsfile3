@@ -1,0 +1,15 @@
+pipeline {
+ agent any
+ stages {
+ stage('Checkout Code') {
+ steps {
+ echo 'this code will print the message from the file '
+ }
+ }
+ stage('Print Message') {
+ steps {
+ echo 'Hello! Jenkins Pipeline executed successfully'
+ }
+ }
+ }
+}
